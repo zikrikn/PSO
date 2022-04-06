@@ -25,7 +25,7 @@ void sndA(sid32 s1, sid32 s3)
 	while(1)
 	{
 		wait(s1);
-		printf("Selamat datang A\n");
+		printf("kwak\n");
 		sleepms(1000);
 		signal(s3);
 	}
@@ -38,7 +38,7 @@ void sndB(sid32 s2, sid32 s1)
 	while(1)
 	{
 		wait(s2);
-		printf("Selamat datang B\n");
+		printf("kwik\n");
 		sleepms(1000);
 		signal(s1);
 	}
@@ -51,7 +51,7 @@ void sndC(sid32 s3, sid32 s2)
 	while(1)
 	{
 		wait(s3);
-		printf("Selamat datang C\n");
+		printf("kwek\n");
 		sleepms(1000);
 		signal(s2);
 	}
