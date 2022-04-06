@@ -14,8 +14,8 @@ process	main(void)
 	s3 = semcreate(0);
 
 	resume(create(sndA, 1024, 20, "process A", 2, s1));
-	resume(create(sndA, 1024, 20, "process B", 2, s2));
-	resume(create(sndA, 1024, 20, "process C", 2, s3));
+	resume(create(sndB, 1024, 20, "process B", 2, s2));
+	resume(create(sndC, 1024, 20, "process C", 2, s3));
 	return OK;    	
 }
 
