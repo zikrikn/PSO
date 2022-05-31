@@ -1,0 +1,36 @@
+#include <stdio.h> //librari untuk printf()
+int main(){ //main()
+    int a = 1; // variabel a diinisiasi dengan 1
+    int b = 2; // variabel b diinisiasi dengan 2
+    printf("Hello World!\n"); // tampilkan “Hello World” pada layar
+    printf("a = %d, b = %d, a + b = %d\n", a, b, a+b);
+    // tampilkan a = 1, b = 2, a + b = 3
+}
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <errno.h>
+int main(int argc, char *argv[])
+{
+    int fd;
+    if(2 != argc)
+    {
+        printf("\n Penggunaan 'myopen nama_file' \n");
+        return 1;
+    }
+    errno = 0;
+    fd = open(argv[1], O_RDONLY);
+    if(-1 == fd)
+    {
+        printf("\n myopen gagal membuka file %s dengan pesan error: [%s]\n", argv[1], strerror(errno));
+        return 1;
+    }
+    else
+    {
+        printf("\n myopen berhasil membuka file %s\n", argv[1]);
+    }
+    return 0;
+}
